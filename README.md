@@ -2,6 +2,12 @@
 
 Flutter Class Project
 
+* Folder Structure
+  - by class day
+  - BMI Calculator
+  - Kakao_clone(UI only)
+  - Tilt_Sensor
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
