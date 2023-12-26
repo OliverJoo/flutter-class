@@ -101,10 +101,8 @@ class _MainScreenState extends State<MainScreen> {
                     context.push(
                       Uri(
                         path: '/result',
-                        queryParameters: {
-                          'height': _heightController.text,
-                          'weight': _weightController.text
-                        },
+                        queryParameters: {'height': _heightController.text,
+                          'weight': _weightController.text},
                       ).toString(),
                     );
 
