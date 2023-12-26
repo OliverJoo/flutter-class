@@ -97,6 +97,7 @@ class _MainScreenState extends State<MainScreen> {
                     }
                     save();
 
+                    // Ver.context.push
                     context.push(
                       Uri(
                         path: '/result',
@@ -107,6 +108,7 @@ class _MainScreenState extends State<MainScreen> {
                       ).toString(),
                     );
 
+                    // Ver.Navigator.push
                     // Navigator.push(
                     // context,
                     // MaterialPageRoute(

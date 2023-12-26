@@ -39,6 +39,10 @@ dependencies:
   shared_preferences: ^2.2.2
   sensors_plus: ^2.0.1
   http: ^1.1.2
+  rxdart: ^0.27.7
+  flutter_bloc: ^8.1.3
+  lottie: ^2.7.0
+  go_router: ^13.0.0
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +77,8 @@ flutter:
     - assets/4.png
     - assets/5.jpeg
     - assets/6.jpeg
+    - assets/animation/
+    - assets/dark_forest.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
