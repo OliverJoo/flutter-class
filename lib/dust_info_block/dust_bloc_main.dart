@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_class/dust_info/air_result.dart';
 import 'package:flutter_class/dust_info_block/bloc/air_bloc.dart';
+import 'model/air_result.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +37,7 @@ class _MainState extends State<Main> {
     return Scaffold(
       body: Center(
         child: StreamBuilder<AirResult>(
-            stream: null ,  // airBloc.airResult, error s
+            stream: airBloc.airResult ,  // airBloc.airResult
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 return buildBody(snapshot.data!);
