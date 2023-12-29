@@ -18,10 +18,7 @@ class ImageDetail extends StatelessWidget {
             child: GestureDetector(
               child: Hero(
                 tag: imageItem.imgUrl,
-                child: Image.network(
-                  imageItem.imgUrl,
-                  fit: BoxFit.fitWidth
-                ),
+                child: Image.network(imageItem.imgUrl, fit: BoxFit.contain),
               ),
               onTap: () {
                 Navigator.pop(context);

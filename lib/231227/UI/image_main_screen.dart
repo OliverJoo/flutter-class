@@ -3,6 +3,7 @@ import 'package:flutter_class/231227/UI/widget/image_detail.dart';
 
 import '../model/image_item.dart';
 import '../repository/image_item_repository.dart';
+import 'package:flutter/services.dart';
 
 class MainScreen extends StatefulWidget {
   MainScreen({super.key});
@@ -67,6 +68,7 @@ class _MainScreenState extends State<MainScreen> {
                     onPressed: () {
                       // print(searchTextController.text);
                       searchImage(searchTextController.text);
+                      SystemChannels.textInput.invokeMethod('TextInput.hide');
                     },
                   )),
             ),
@@ -100,6 +102,11 @@ class _MainScreenState extends State<MainScreen> {
                           ),
                           onTap: () {
                             print('imageItem.imgUrl ${imageItem.imgUrl}');
+
+
+                            // FocusManager.instance.primaryFocus?.unfocus();
+                            // FocusScope.of(context).unfocus();
+
                             Navigator.push(
                               context,
                               MaterialPageRoute(
