@@ -7,10 +7,6 @@ import 'data_source/mask_api.dart';
 import 'model/store.dart';
 
 void main() {
-  // Timer.periodic(Duration(seconds: 1), (timer) {
-  //   print('!!!');
-  // });
-
   runApp(const MyApp());
 }
 
@@ -38,7 +34,7 @@ class MaskStoreScreen extends StatefulWidget {
 }
 
 class _MaskStoreScreenState extends State<MaskStoreScreen> {
-  late List<Store> maskStroes;
+  late List<Store> maskStores;
   bool isLoading = true;
 
   Future<List<Store>> getMaskStoreInfo() async {
@@ -62,7 +58,7 @@ class _MaskStoreScreenState extends State<MaskStoreScreen> {
   void initState() {
     getMaskStoreInfo().then((maskStoreResult) {
       setState(() {
-        maskStroes = maskStoreResult;
+        maskStores = maskStoreResult;
         isLoading = false;
       });
     });
@@ -93,9 +89,7 @@ class _MaskStoreScreenState extends State<MaskStoreScreen> {
               ),
             )
           : ListView(
-              children: maskStroes
-              .where((e) => e.stock != 'break')
-                  .map((e) {
+              children: maskStores.where((e) => e.stock != 'break').map((e) {
                 return ListTile(
                   title: Text(e.name),
                   subtitle: Text(e.address),
