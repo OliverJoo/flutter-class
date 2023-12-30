@@ -91,7 +91,11 @@ class _MaskStoreScreenState extends State<MaskStoreScreen> {
           : ListView(
               children: maskStores.where((e) => e.stock != 'break').map((e) {
                 return ListTile(
-                  title: Text(e.name),
+                  title: Text(
+                    e.name,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 18),
+                  ),
                   subtitle: Text(e.address),
                   trailing: _stockStatusWidget(e),
                 );
