@@ -18,14 +18,17 @@ class KakaoChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Container(
-          height: 60,
-          child: ClipOval(
-            child: Image.asset(this.img),
-          )),
+      leading: AspectRatio(
+        aspectRatio: 1, // managing vertical/horizontal ratio
+        child: SizedBox(
+            height: 60,
+            child: ClipOval(
+              child: Image.asset(img),
+            )),
+      ),
       title: Text(
         name,
-        style: TextStyle(
+        style: const TextStyle(
             fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
       ),
       subtitle: Text(
@@ -34,7 +37,8 @@ class KakaoChat extends StatelessWidget {
         style: TextStyle(fontSize: 18, color: Colors.grey),
       ),
       trailing: Text(
-        DateFormat.MMMEd().format(DateTime.fromMillisecondsSinceEpoch(dateTime)),
+        DateFormat.MMMEd()
+            .format(DateTime.fromMillisecondsSinceEpoch(dateTime)),
         style: const TextStyle(color: Colors.grey, fontSize: 15),
         textAlign: TextAlign.end,
       ),
