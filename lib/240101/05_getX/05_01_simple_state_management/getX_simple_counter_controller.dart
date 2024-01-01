@@ -15,7 +15,7 @@ class CounterController extends GetxController {
 
   void increment() {
     count++;
-    update();
+    update(); // simple type state management - should update() manually
   }
 
   void decrement() {

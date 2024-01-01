@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,6 +8,7 @@ class GetXWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // simple type state management usage by GetBuilder
     return GetBuilder<CounterController>(
       builder: (controller) {
         return Container(
