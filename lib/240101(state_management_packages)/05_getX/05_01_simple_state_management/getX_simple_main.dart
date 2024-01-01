@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'GetX Demo',
+      title: 'GetX Simple State Management Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
