@@ -18,14 +18,18 @@ class KakaoChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: AspectRatio(
-        aspectRatio: 1, // managing vertical/horizontal ratio
-        child: SizedBox(
-            height: 60,
-            child: ClipOval(
-              child: Image.asset(img),
-            )),
+      leading: CircleAvatar(
+        radius: 25,
+          backgroundImage: AssetImage(img),
       ),
+      // AspectRatio(
+      //   aspectRatio: 1, // managing vertical/horizontal ratio
+      //   child: SizedBox(
+      //       height: 60,
+      //       child: ClipOval(
+      //         child: Image.asset(img),
+      //       )),
+      // ),
       title: Text(
         name,
         style: const TextStyle(
