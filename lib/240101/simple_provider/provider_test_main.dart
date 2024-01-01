@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_class/dust_info/main.dart';
 import 'package:provider/provider.dart';
 
 import 'counter.dart';
@@ -35,9 +34,7 @@ class ProvPracticeScreen extends StatelessWidget {
       ),
       body: MultiProvider(
         providers: [
-          ChangeNotifierProvider<Counter>.value(
-            value: Counter(),
-          ),
+          ChangeNotifierProvider<Counter>.value(value: Counter()),
           ProxyProvider<Counter, Sum>(update: (context, model, sum) {
             if (sum != null) {
               sum.sum = model.count;
