@@ -7,8 +7,10 @@ class SubWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var futureState = Provider.of<String>(context);
-    var streamState = Provider.of<int>(context);
+    var futureState = context.watch<String>();
+    // var futureState = Provider.of<String>(context);
+    var streamState = context.watch<int>();
+    // var streamState = Provider.of<int>(context);
 
     return Container(
       color: Colors.red,

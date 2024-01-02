@@ -9,9 +9,9 @@ class SubWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var counter = Provider.of<Counter>(context);
-    var sum = Provider.of<Sum>(context);
-    var stringData = Provider.of<String>(context);
+    var counter = context.watch<Counter>();
+    var sum = context.watch<Sum>();
+    var stringData = context.watch<String>();
 
     return Container(
       color: Colors.orange,

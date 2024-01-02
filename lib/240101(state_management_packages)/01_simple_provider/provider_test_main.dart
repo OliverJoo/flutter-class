@@ -34,10 +34,10 @@ class ProvPracticeScreen extends StatelessWidget {
       ),
       body: MultiProvider(
         providers: [
-          ChangeNotifierProvider<Counter>.value(value: Counter()),
+          ChangeNotifierProvider(create: (_) => Counter()),
           ProxyProvider<Counter, Sum>(update: (context, model, sum) {
             if (sum != null) {
-              sum.sum = model.count;
+              sum.sum += model.count;
               return sum;
             } else {
               return Sum(model);
