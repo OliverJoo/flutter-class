@@ -52,6 +52,7 @@ dependencies:
   latlong2: ^0.9.0
   get: ^4.6.6
   get_it: ^7.6.4
+  freezed: ^2.4.6
 
 dev_dependencies:
   flutter_test:

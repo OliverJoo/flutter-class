@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class/240102/routes.dart';
+
 import 'package:flutter_class/240102/ui/main_view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -20,14 +22,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'UI Practice Image Pixa',
+    return MaterialApp.router(
+      routerConfig: router,
+        title: 'UI Practice Image Pixa with go_router & getIt & Provider',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: ChangeNotifierProvider(
-          create: (context) => MainViewModel(repository: ImageItemRepositoryImpl()),
-          child: const MainScreen(),
-        ));
+        // home: ChangeNotifierProvider( // no need for MaterialApp.router usage
+        //   create: (context) => MainViewModel(repository: ImageItemRepositoryImpl()),
+        //   child: const MainScreen(),
+        // ),
+    );
   }
 }
