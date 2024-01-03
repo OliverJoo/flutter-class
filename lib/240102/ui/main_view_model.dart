@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../model/image_item.dart';
-import '../repository/image_item_repository_impl.dart';
+import '../repository/image_item_repository.dart';
 
 class MainViewModel extends ChangeNotifier {
-  final ImageItemRepositoryImpl repository;
+  final ImageItemRepository repository;
   bool isLoading = false;
 
   MainViewModel({

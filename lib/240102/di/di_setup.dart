@@ -6,10 +6,10 @@ import '../ui/main_view_model.dart';
 
 final getIt = GetIt.instance;
 
-void setup() {
+void diSetup() {
   getIt.registerSingleton<ImageItemRepository>(ImageItemRepositoryImpl());
 
 // Alternatively you could write it if you don't like global variables
   GetIt.I.registerFactory<MainViewModel>(
-      () => MainViewModel(repository: ImageItemRepositoryImpl()));
+      () => MainViewModel(repository: getIt<ImageItemRepository>()));
 }
