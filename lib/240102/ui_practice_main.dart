@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_class/240102/ui/main_view_model.dart';
 import 'package:provider/provider.dart';
 
+import 'repository/image_item_repository_impl.dart';
 import 'ui/image_main_screen.dart';
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: ChangeNotifierProvider(
-          create: (context) => MainViewModel(),
+          create: (context) => MainViewModel(repository: ImageItemRepositoryImpl()),
           child: const MainScreen(),
         ));
   }
