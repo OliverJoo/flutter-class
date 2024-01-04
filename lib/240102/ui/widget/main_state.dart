@@ -9,7 +9,7 @@ part 'main_state.g.dart';
 
 @freezed
 class MainState with _$MainState {
-  // ImageItem inside of Constructor should have fromJson(), not fromMap()
+  // Inside of ImageItem class should have fromJson(), not fromMap()
   const factory MainState({
     @Default([]) List<ImageItem> imageItems, // set default value as []
     @Default(false) bool isLoading, // set default value as false
