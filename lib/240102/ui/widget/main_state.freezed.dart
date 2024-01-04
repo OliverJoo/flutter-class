@@ -20,7 +20,8 @@ MainState _$MainStateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MainState {
-  List<ImageItem> get imageItems => throw _privateConstructorUsedError;
+  List<ImageItem> get imageItems =>
+      throw _privateConstructorUsedError; // set default value as []
   bool get isLoading => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -123,6 +124,7 @@ class _$MainStateImpl with DiagnosticableTreeMixin implements _MainState {
     return EqualUnmodifiableListView(_imageItems);
   }
 
+// set default value as []
   @override
   @JsonKey()
   final bool isLoading;
@@ -181,7 +183,7 @@ abstract class _MainState implements MainState {
 
   @override
   List<ImageItem> get imageItems;
-  @override
+  @override // set default value as []
   bool get isLoading;
   @override
   @JsonKey(ignore: true)

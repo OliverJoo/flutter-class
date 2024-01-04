@@ -1,4 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter_class/240102/ui/main_event.dart';
 import 'package:flutter_class/240102/ui/main_view_model.dart';
 import 'package:flutter_class/240102/ui/widget/image_detail.dart';
 import 'package:provider/provider.dart';
@@ -18,6 +22,46 @@ class _MainScreenState extends State<MainScreen> {
   void dispose() {
     super.dispose();
     searchTextController.dispose();
+  }
+
+  late StreamSubscription<MainEvent> streamSubscription;
+
+  @override
+  void initState() {
+    super.initState();
+
+    Future.microtask(() {
+      streamSubscription =
+          context.read<MainViewModel>().eventStream.listen((event) {
+        switch (event) {
+          case ShowSnackBar():
+            ScaffoldMessenger.of(context)
+                .showSnackBar(SnackBar(content: Text(event.msg)));
+          case ShowDialog():
+            exitConfirm(event);
+        }
+      });
+    });
+  }
+
+  Future<bool> exitConfirm(event) async {
+    return await showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            content: Text(event.e.toString()),
+            actions: [
+              ElevatedButton(
+                onPressed: () => Navigator.of(context).pop(true),
+                child: const Text('Yes'),
+              ),
+              ElevatedButton(
+                onPressed: () => Navigator.of(context).pop(false),
+                child: const Text('No'),
+              ),
+            ],
+          ),
+        ) ??
+        false;
   }
 
   @override
