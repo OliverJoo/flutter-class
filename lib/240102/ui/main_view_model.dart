@@ -1,25 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class/240102/ui/widget/main_state.dart';
 
 import '../model/image_item.dart';
 import '../repository/image_item_repository.dart';
 
 class MainViewModel extends ChangeNotifier {
-  final ImageItemRepository repository;
-  bool isLoading = false;
+  final ImageItemRepository _repository;
+  MainState _state = const MainState();
+
+  MainState get state => _state;
 
   MainViewModel({
-    required this.repository,
-  });
-
-  List<ImageItem> imageItems = [];
+    required ImageItemRepository repository,
+  }) : _repository = repository;
 
   Future<void> searchImage(String query) async {
-    isLoading = true;
+    _state = _state.copyWith(
+      isLoading: true,
+    );
     notifyListeners();
 
-    imageItems = await repository.getImageItems(query);
-
-    isLoading = false;
-    notifyListeners();
+    try {
+      _state = _state.copyWith(
+          isLoading: false, imageItems: await _repository.getImageItems(query));
+      notifyListeners();
+    } catch (e) {
+      print(e.toString());
+    }
   }
 }
