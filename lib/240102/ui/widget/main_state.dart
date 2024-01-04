@@ -9,10 +9,12 @@ part 'main_state.g.dart';
 
 @freezed
 class MainState with _$MainState {
+  // ImageItem inside of Constructor should have fromJson(), not fromMap()
   const factory MainState({
-    @Default([]) List<ImageItem> imageItems,
-    @Default(false) bool isLoading,
+    @Default([]) List<ImageItem> imageItems, // set default value as []
+    @Default(false) bool isLoading, // set default value as false
   }) = _MainState;
 
-  factory MainState.fromJson(Map<String, Object?> json) => _$MainStateFromJson(json);
+  factory MainState.fromJson(Map<String, Object?> json) =>
+      _$MainStateFromJson(json);
 }

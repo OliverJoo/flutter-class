@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_class/240102/ui/widget/main_state.dart';
 
-import '../model/image_item.dart';
 import '../repository/image_item_repository.dart';
 
 class MainViewModel extends ChangeNotifier {

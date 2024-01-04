@@ -8,7 +8,6 @@ import 'di/di_setup.dart';
 import 'repository/image_item_repository_impl.dart';
 import 'ui/image_main_screen.dart';
 
-
 void main() {
   diSetup();
   runApp(
@@ -24,14 +23,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: router,
-        title: 'UI Practice Image Pixa with go_router & getIt & Provider',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        // home: ChangeNotifierProvider( // no need for MaterialApp.router usage
-        //   create: (context) => MainViewModel(repository: ImageItemRepositoryImpl()),
-        //   child: const MainScreen(),
-        // ),
+      title: 'UI Practice Image Pixa with go_router & getIt & Provider',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      // no need for MaterialApp.router usage
+      // home: ChangeNotifierProvider(
+      //   create: (context) => MainViewModel(repository: ImageItemRepositoryImpl()),
+      //   child: const MainScreen(),
+      // ),
     );
   }
 }
