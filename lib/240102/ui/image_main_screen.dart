@@ -26,6 +26,8 @@ class _MainScreenState extends State<MainScreen> {
     final state = viewModel.state;
 
     return Scaffold(
+      // If resizeToAvoidBottomInset = true, widget shows above keyboard. Thus, false
+      // resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
