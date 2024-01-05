@@ -18,12 +18,6 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   final searchTextController = TextEditingController();
 
-  @override
-  void dispose() {
-    super.dispose();
-    searchTextController.dispose();
-  }
-
   late StreamSubscription<MainEvent> streamSubscription;
 
   @override
@@ -62,6 +56,13 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ) ??
         false;
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    streamSubscription?.cancel();  // don't forget this!
+    searchTextController.dispose();
   }
 
   @override
