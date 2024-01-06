@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: router,
+      debugShowCheckedModeBanner: false,
       title: 'UI Practice Image Pixa with go_router & getIt & Provider',
       theme: ThemeData(
         primarySwatch: Colors.blue,
