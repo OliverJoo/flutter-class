@@ -1,7 +1,7 @@
-import '../core/result.dart';
-import '../model/image_item.dart';
-import 'image_item_repository.dart';
-import 'image_item_repository_impl.dart';
+import 'package:flutter_class/240102/core/result.dart';
+import 'package:flutter_class/240102/domain/model/image_item.dart';
+
+import '../../domain/repository/image_item_repository.dart';
 
 class MockImageItemRepositoryImpl implements ImageItemRepository {
   @override

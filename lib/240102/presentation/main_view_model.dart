@@ -2,12 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_class/240102/core/result.dart';
-import 'package:flutter_class/240102/model/image_item.dart';
-import 'package:flutter_class/240102/ui/main_event.dart';
-import 'package:flutter_class/240102/ui/widget/main_state.dart';
-import 'package:flutter_class/dust_info/main.dart';
+import 'package:flutter_class/240102/domain/model/image_item.dart';
+import 'package:flutter_class/240102/domain/repository/image_item_repository.dart';
+import 'package:flutter_class/240102/presentation/widget/main_state.dart';
 
-import '../repository/image_item_repository.dart';
+import 'main_event.dart';
+
 
 class MainViewModel extends ChangeNotifier {
   final ImageItemRepository _repository;
@@ -39,8 +39,8 @@ class MainViewModel extends ChangeNotifier {
       case Error<List<ImageItem>>():
         _state = _state.copyWith(isLoading: false);
         notifyListeners();
-        _eventController
-            .add(const MainEvent.showDialog('Fail!')); // ${result.e.toString()}'));
+        _eventController.add(
+            const MainEvent.showDialog('Fail!')); // ${result.e.toString()}'));
     }
   }
 }

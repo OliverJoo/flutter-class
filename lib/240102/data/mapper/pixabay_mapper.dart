@@ -1,5 +1,6 @@
-import '../dto/PixabayDto.dart';
-import '../model/image_item.dart';
+
+import 'package:flutter_class/240102/data/dto/PixabayDto.dart';
+import 'package:flutter_class/240102/domain/model/image_item.dart';
 
 extension DtoToModel on Hits {
   ImageItem toImageItem() {

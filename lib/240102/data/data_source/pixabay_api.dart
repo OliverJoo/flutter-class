@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import '../dto/PixabayDto.dart';
+import 'package:flutter_class/240102/data/dto/PixabayDto.dart';
 import 'package:http/http.dart' as http;
 
 class PixabyApi {

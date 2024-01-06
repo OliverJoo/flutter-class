@@ -1,10 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_class/240102/ui/main_event.dart';
-import 'package:flutter_class/240102/ui/main_view_model.dart';
-import 'package:flutter_class/240102/ui/widget/image_detail.dart';
+import 'package:flutter_class/240102/presentation/main_event.dart';
+import 'package:flutter_class/240102/presentation/main_view_model.dart';
+import 'package:flutter_class/240102/presentation/widget/image_detail.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
 

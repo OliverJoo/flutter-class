@@ -1,10 +1,10 @@
-import 'package:flutter_class/240102/data_source/pixabay_api.dart';
-import 'package:flutter_class/240102/dto/PixabayDto.dart';
-import 'package:flutter_class/240102/mapper/pixabay_mapper.dart';
+import 'package:flutter_class/240102/core/result.dart';
+import 'package:flutter_class/240102/data/data_source/pixabay_api.dart';
+import 'package:flutter_class/240102/data/dto/PixabayDto.dart';
+import 'package:flutter_class/240102/data/mapper/pixabay_mapper.dart';
+import 'package:flutter_class/240102/domain/model/image_item.dart';
 
-import '../core/result.dart';
-import '../model/image_item.dart';
-import 'image_item_repository.dart';
+import '../../domain/repository/image_item_repository.dart';
 
 class ImageItemRepositoryImpl implements ImageItemRepository {
   @override

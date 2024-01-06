@@ -1,7 +1,7 @@
+import 'package:flutter_class/240102/domain/model/image_item.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 
-import '../../model/image_item.dart';
 
 part 'main_state.freezed.dart';
 
