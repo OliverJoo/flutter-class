@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_class/240102/core/result.dart';
 import 'package:flutter_class/240102/domain/model/image_item.dart';
 import 'package:flutter_class/240102/domain/repository/image_item_repository.dart';
-import 'package:flutter_class/240102/presentation/widget/main_state.dart';
+import 'package:flutter_class/240102/presentation/main_screen/widget/main_state.dart';
+
 
 import 'main_event.dart';
 

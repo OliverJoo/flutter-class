@@ -1,6 +1,6 @@
 import 'package:flutter_class/240102/data/repository/image_item_repository_impl.dart';
 import 'package:flutter_class/240102/domain/repository/image_item_repository.dart';
-import 'package:flutter_class/240102/presentation/main_view_model.dart';
+import 'package:flutter_class/240102/presentation/main_screen/main_view_model.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;

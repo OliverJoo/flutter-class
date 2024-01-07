@@ -1,20 +1,19 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_class/240102/presentation/main_event.dart';
-import 'package:flutter_class/240102/presentation/main_view_model.dart';
-import 'package:flutter_class/240102/presentation/widget/image_detail.dart';
+import 'package:flutter_class/240102/presentation/main_screen/main_event.dart';
+import 'package:flutter_class/240102/presentation/main_screen/main_view_model.dart';
+import 'package:flutter_class/240102/presentation/main_screen/widget/image_detail.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+class ImageMainScreen extends StatefulWidget {
+  const ImageMainScreen({super.key});
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<ImageMainScreen> createState() => _ImageMainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _ImageMainScreenState extends State<ImageMainScreen> {
   final searchTextController = TextEditingController();
 
   late StreamSubscription<MainEvent> streamSubscription;

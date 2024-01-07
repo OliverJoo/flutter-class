@@ -1,5 +1,5 @@
-import 'package:flutter_class/240102/UI/image_main_screen.dart';
-import 'package:flutter_class/240102/presentation/main_view_model.dart';
+import 'package:flutter_class/240102/presentation/main_screen/main_view_model.dart';
+import 'package:flutter_class/240102/presentation/main_screen/image_main_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
@@ -12,7 +12,7 @@ final router = GoRouter(
       path: '/',
       builder: (context, state) => ChangeNotifierProvider(
         create: (_) => getIt<MainViewModel>(),
-        child: const MainScreen(),
+        child: const ImageMainScreen(),
       ),
     ),
   ],

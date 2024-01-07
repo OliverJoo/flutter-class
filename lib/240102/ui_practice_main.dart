@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       // no need for MaterialApp.router usage
       // home: ChangeNotifierProvider(
       //   create: (context) => MainViewModel(repository: ImageItemRepositoryImpl()),
-      //   child: const MainScreen(),
+      //   child: const ImageMainScreen(),
       // ),
     );
   }
