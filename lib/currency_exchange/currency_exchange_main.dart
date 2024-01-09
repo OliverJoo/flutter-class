@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  // Timer.periodic(Duration(seconds: 1), (timer) {
-  //   print('!!!');
-  // });
-
   runApp(const MyApp());
 }
 
