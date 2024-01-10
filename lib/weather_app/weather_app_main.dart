@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class/weather_app/lib/data/repository/WeatherRepositoryImpl.dart';
+import 'package:flutter_class/weather_app/lib/presentation/weather_main_view_model.dart';
+import 'package:provider/provider.dart';
 
 import 'lib/presentation/weather_main_screen.dart';
 
@@ -18,8 +21,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const WeatherMainScreen(),
+      home: ChangeNotifierProvider(
+        create: (context) =>
+            WeatherMainViewModel(repository: WeatherRepositoryImpl()),
+        child: const WeatherMainScreen(),
+      ),
     );
   }
 }
-

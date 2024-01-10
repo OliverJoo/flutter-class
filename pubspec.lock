@@ -528,6 +528,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.2"
+  open_meteo:
+    dependency: "direct main"
+    description:
+      name: open_meteo
+      sha256: f56ec91fcce5d6d13e4f4dc7270a95479965d30a13692ff288b01f33d37aa97f
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.10"
   package_config:
     dependency: transitive
     description:
