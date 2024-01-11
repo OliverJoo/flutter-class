@@ -42,8 +42,8 @@ class _WeatherMainScreenState extends State<WeatherMainScreen> {
                   children: [
                     Column(
                       children: [
-                        Text(
-                            '${DateFormat.Md().format(state.weatherInfo[index].time)} ${DateFormat.H().format(state.weatherInfo[index].time)}시   '),
+                        Text(DateFormat('MM/dd 일 HH 시')
+                            .format(state.weatherInfo[index].time)),
                         Text('날씨코드: ${state.weatherInfo[index].weatherCode}'),
                       ],
                     ),
