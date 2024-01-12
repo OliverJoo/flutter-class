@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_class/weather_app/lib/core/weather_result.dart';
-import 'package:flutter_class/weather_app/lib/domain/model/weather_info.dart';
-import 'package:flutter_class/weather_app/lib/domain/repository/weather_repository.dart';
-import 'package:flutter_class/weather_app/lib/presentation/weather_main_state.dart';
+import 'package:flutter_class/weather_app/core/weather_result.dart';
+import 'package:flutter_class/weather_app/domain/model/weather_info.dart';
+import 'package:flutter_class/weather_app/domain/repository/weather_repository.dart';
+import 'package:flutter_class/weather_app/presentation/weather_main_state.dart';
 
 class WeatherMainViewModel with ChangeNotifier {
   final WeatherRepository repository;

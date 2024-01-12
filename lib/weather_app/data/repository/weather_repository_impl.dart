@@ -1,5 +1,5 @@
-import 'package:flutter_class/weather_app/lib/core/weather_result.dart';
-import 'package:flutter_class/weather_app/lib/domain/model/weather_info.dart';
+import 'package:flutter_class/weather_app/core/weather_result.dart';
+import 'package:flutter_class/weather_app/domain/model/weather_info.dart';
 import '../../domain/repository/weather_repository.dart';
 import '../data_source/open_meteo_api.dart';
 

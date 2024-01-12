@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_class/dust_info/air_result.dart';
-import 'package:flutter_class/weather_app/lib/presentation/weather_main_view_model.dart';
+import 'package:flutter_class/weather_app/presentation/weather_main_view_model.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 

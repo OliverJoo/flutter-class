@@ -1,10 +1,10 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_class/weather_app/lib/data/repository/weather_repository_impl.dart';
-import 'package:flutter_class/weather_app/lib/presentation/weather_main_view_model.dart';
+import 'package:flutter_class/weather_app/data/repository/weather_repository_impl.dart';
+import 'package:flutter_class/weather_app/presentation/weather_main_view_model.dart';
 import 'package:provider/provider.dart';
 
-import 'lib/presentation/weather_main_screen.dart';
+import 'presentation/weather_main_screen.dart';
 
 void main() {
   runApp(const MyApp());

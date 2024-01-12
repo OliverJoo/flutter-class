@@ -1,6 +1,6 @@
-import 'package:flutter_class/weather_app/lib/core/weather_result.dart';
-import 'package:flutter_class/weather_app/lib/data/repository/weather_repository_impl.dart';
-import 'package:flutter_class/weather_app/lib/domain/model/weather_info.dart';
+import 'package:flutter_class/weather_app/core/weather_result.dart';
+import 'package:flutter_class/weather_app/data/repository/weather_repository_impl.dart';
+import 'package:flutter_class/weather_app/domain/model/weather_info.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
