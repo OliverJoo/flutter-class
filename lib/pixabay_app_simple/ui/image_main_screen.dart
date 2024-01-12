@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_class/231227/UI/widget/image_detail.dart';
+import 'package:flutter_class/pixabay_app_simple/ui/widget/image_detail.dart';
+
 
 import '../model/image_item.dart';
 import '../repository/image_item_repository.dart';
