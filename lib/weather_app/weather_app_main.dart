@@ -1,3 +1,4 @@
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_class/weather_app/lib/data/repository/weather_repository_impl.dart';
 import 'package:flutter_class/weather_app/lib/presentation/weather_main_view_model.dart';
@@ -18,9 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: FlexColorScheme.light(scheme: FlexScheme.deepPurple).toTheme,
       home: ChangeNotifierProvider(
         create: (context) =>
             WeatherMainViewModel(repository: WeatherRepositoryImpl()),

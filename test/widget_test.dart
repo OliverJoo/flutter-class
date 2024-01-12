@@ -7,12 +7,10 @@
 
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
+
 import 'package:flutter_class/dust_info/air_result.dart';
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:http/http.dart' as http;
-import 'package:flutter_class/231221/main.dart';
 
 void main() {
   test('http 통신 테스트', () async{
