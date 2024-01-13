@@ -18,12 +18,12 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$MovieInfo {
   String get title => throw _privateConstructorUsedError;
   bool get isAdult => throw _privateConstructorUsedError;
-  int get movieId => throw _privateConstructorUsedError;
+  num get movieId => throw _privateConstructorUsedError;
   String get overview => throw _privateConstructorUsedError;
-  double get voteAverage => throw _privateConstructorUsedError;
-  int get voteCount => throw _privateConstructorUsedError;
-  List<int> get genreIds => throw _privateConstructorUsedError;
-  DateTime get releasedDate => throw _privateConstructorUsedError;
+  num get voteAverage => throw _privateConstructorUsedError;
+  num get voteCount => throw _privateConstructorUsedError;
+  List<num> get genreIds => throw _privateConstructorUsedError;
+  String get releasedDate => throw _privateConstructorUsedError;
   String get posterPath => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -39,12 +39,12 @@ abstract class $MovieInfoCopyWith<$Res> {
   $Res call(
       {String title,
       bool isAdult,
-      int movieId,
+      num movieId,
       String overview,
-      double voteAverage,
-      int voteCount,
-      List<int> genreIds,
-      DateTime releasedDate,
+      num voteAverage,
+      num voteCount,
+      List<num> genreIds,
+      String releasedDate,
       String posterPath});
 }
 
@@ -83,7 +83,7 @@ class _$MovieInfoCopyWithImpl<$Res, $Val extends MovieInfo>
       movieId: null == movieId
           ? _value.movieId
           : movieId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as num,
       overview: null == overview
           ? _value.overview
           : overview // ignore: cast_nullable_to_non_nullable
@@ -91,19 +91,19 @@ class _$MovieInfoCopyWithImpl<$Res, $Val extends MovieInfo>
       voteAverage: null == voteAverage
           ? _value.voteAverage
           : voteAverage // ignore: cast_nullable_to_non_nullable
-              as double,
+              as num,
       voteCount: null == voteCount
           ? _value.voteCount
           : voteCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as num,
       genreIds: null == genreIds
           ? _value.genreIds
           : genreIds // ignore: cast_nullable_to_non_nullable
-              as List<int>,
+              as List<num>,
       releasedDate: null == releasedDate
           ? _value.releasedDate
           : releasedDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as String,
       posterPath: null == posterPath
           ? _value.posterPath
           : posterPath // ignore: cast_nullable_to_non_nullable
@@ -123,12 +123,12 @@ abstract class _$$MovieInfoImplCopyWith<$Res>
   $Res call(
       {String title,
       bool isAdult,
-      int movieId,
+      num movieId,
       String overview,
-      double voteAverage,
-      int voteCount,
-      List<int> genreIds,
-      DateTime releasedDate,
+      num voteAverage,
+      num voteCount,
+      List<num> genreIds,
+      String releasedDate,
       String posterPath});
 }
 
@@ -165,7 +165,7 @@ class __$$MovieInfoImplCopyWithImpl<$Res>
       movieId: null == movieId
           ? _value.movieId
           : movieId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as num,
       overview: null == overview
           ? _value.overview
           : overview // ignore: cast_nullable_to_non_nullable
@@ -173,19 +173,19 @@ class __$$MovieInfoImplCopyWithImpl<$Res>
       voteAverage: null == voteAverage
           ? _value.voteAverage
           : voteAverage // ignore: cast_nullable_to_non_nullable
-              as double,
+              as num,
       voteCount: null == voteCount
           ? _value.voteCount
           : voteCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as num,
       genreIds: null == genreIds
           ? _value._genreIds
           : genreIds // ignore: cast_nullable_to_non_nullable
-              as List<int>,
+              as List<num>,
       releasedDate: null == releasedDate
           ? _value.releasedDate
           : releasedDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as String,
       posterPath: null == posterPath
           ? _value.posterPath
           : posterPath // ignore: cast_nullable_to_non_nullable
@@ -204,7 +204,7 @@ class _$MovieInfoImpl with DiagnosticableTreeMixin implements _MovieInfo {
       required this.overview,
       required this.voteAverage,
       required this.voteCount,
-      required final List<int> genreIds,
+      required final List<num> genreIds,
       required this.releasedDate,
       required this.posterPath})
       : _genreIds = genreIds;
@@ -214,23 +214,23 @@ class _$MovieInfoImpl with DiagnosticableTreeMixin implements _MovieInfo {
   @override
   final bool isAdult;
   @override
-  final int movieId;
+  final num movieId;
   @override
   final String overview;
   @override
-  final double voteAverage;
+  final num voteAverage;
   @override
-  final int voteCount;
-  final List<int> _genreIds;
+  final num voteCount;
+  final List<num> _genreIds;
   @override
-  List<int> get genreIds {
+  List<num> get genreIds {
     if (_genreIds is EqualUnmodifiableListView) return _genreIds;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_genreIds);
   }
 
   @override
-  final DateTime releasedDate;
+  final String releasedDate;
   @override
   final String posterPath;
 
@@ -300,12 +300,12 @@ abstract class _MovieInfo implements MovieInfo {
   const factory _MovieInfo(
       {required final String title,
       required final bool isAdult,
-      required final int movieId,
+      required final num movieId,
       required final String overview,
-      required final double voteAverage,
-      required final int voteCount,
-      required final List<int> genreIds,
-      required final DateTime releasedDate,
+      required final num voteAverage,
+      required final num voteCount,
+      required final List<num> genreIds,
+      required final String releasedDate,
       required final String posterPath}) = _$MovieInfoImpl;
 
   @override
@@ -313,17 +313,17 @@ abstract class _MovieInfo implements MovieInfo {
   @override
   bool get isAdult;
   @override
-  int get movieId;
+  num get movieId;
   @override
   String get overview;
   @override
-  double get voteAverage;
+  num get voteAverage;
   @override
-  int get voteCount;
+  num get voteCount;
   @override
-  List<int> get genreIds;
+  List<num> get genreIds;
   @override
-  DateTime get releasedDate;
+  String get releasedDate;
   @override
   String get posterPath;
   @override

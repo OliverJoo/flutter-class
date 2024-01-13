@@ -6,5 +6,5 @@ part 'movie_result.freezed.dart';
 @freezed
 sealed class MovieResult<T> with _$MovieResult<T> {
   const factory MovieResult.success(T data) = Success;
-  const factory MovieResult.error(String e) = Error;
+  const factory MovieResult.error(Exception e) = Error;
 }

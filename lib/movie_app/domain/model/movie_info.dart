@@ -8,12 +8,12 @@ class MovieInfo with _$MovieInfo {
   const factory MovieInfo({
     required String title,
     required bool isAdult,
-    required int movieId,
+    required num movieId,
     required String overview,
-    required double voteAverage,
-    required int voteCount,
-    required List<int> genreIds,
-    required DateTime releasedDate,
+    required num voteAverage,
+    required num voteCount,
+    required List<num> genreIds,
+    required String releasedDate,
     required String posterPath,
   }) = _MovieInfo;
 }

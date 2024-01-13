@@ -19,19 +19,19 @@ mixin _$MovieResult<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T data) success,
-    required TResult Function(String e) error,
+    required TResult Function(Exception e) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T data)? success,
-    TResult? Function(String e)? error,
+    TResult? Function(Exception e)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T data)? success,
-    TResult Function(String e)? error,
+    TResult Function(Exception e)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -148,7 +148,7 @@ class _$SuccessImpl<T> with DiagnosticableTreeMixin implements Success<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T data) success,
-    required TResult Function(String e) error,
+    required TResult Function(Exception e) error,
   }) {
     return success(data);
   }
@@ -157,7 +157,7 @@ class _$SuccessImpl<T> with DiagnosticableTreeMixin implements Success<T> {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T data)? success,
-    TResult? Function(String e)? error,
+    TResult? Function(Exception e)? error,
   }) {
     return success?.call(data);
   }
@@ -166,7 +166,7 @@ class _$SuccessImpl<T> with DiagnosticableTreeMixin implements Success<T> {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T data)? success,
-    TResult Function(String e)? error,
+    TResult Function(Exception e)? error,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -222,7 +222,7 @@ abstract class _$$ErrorImplCopyWith<T, $Res> {
           _$ErrorImpl<T> value, $Res Function(_$ErrorImpl<T>) then) =
       __$$ErrorImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({String e});
+  $Res call({Exception e});
 }
 
 /// @nodoc
@@ -242,7 +242,7 @@ class __$$ErrorImplCopyWithImpl<T, $Res>
       null == e
           ? _value.e
           : e // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Exception,
     ));
   }
 }
@@ -253,7 +253,7 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
   const _$ErrorImpl(this.e);
 
   @override
-  final String e;
+  final Exception e;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -289,7 +289,7 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T data) success,
-    required TResult Function(String e) error,
+    required TResult Function(Exception e) error,
   }) {
     return error(e);
   }
@@ -298,7 +298,7 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T data)? success,
-    TResult? Function(String e)? error,
+    TResult? Function(Exception e)? error,
   }) {
     return error?.call(e);
   }
@@ -307,7 +307,7 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T data)? success,
-    TResult Function(String e)? error,
+    TResult Function(Exception e)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -349,9 +349,9 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
 }
 
 abstract class Error<T> implements MovieResult<T> {
-  const factory Error(final String e) = _$ErrorImpl<T>;
+  const factory Error(final Exception e) = _$ErrorImpl<T>;
 
-  String get e;
+  Exception get e;
   @JsonKey(ignore: true)
   _$$ErrorImplCopyWith<T, _$ErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
