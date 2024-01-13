@@ -60,6 +60,9 @@ dependencies:
   flutter_app_badger: ^1.5.0
   weather_icons: ^3.0.0
   flex_color_scheme: ^7.3.1
+  flutter_dotenv: ^5.1.0
+  dio: ^5.4.0
+  tmdb_api: ^2.1.5
 
 
 dev_dependencies:
@@ -101,6 +104,7 @@ flutter:
     - assets/6.jpeg
     - assets/animation/
     - assets/dark_forest.jpg
+    - assets/.env
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
