@@ -1,12 +1,15 @@
+import 'package:flutter_class/movie_app/data/data_source/tmdb_interface.dart';
 import 'package:flutter_class/movie_app/data/dto/tmdb_movie_detail_dto.dart';
 import 'package:tmdb_api/tmdb_api.dart';
 
 import '../../core/url_collection.dart';
 import '../dto/tmdb_movie_dto.dart';
 
-class TmdbApi {
+class TmdbApi implements TmdbInterface {
+  @override
   Future<TmdbMovieDto> getTmdbMovieResults(String query) async {
-    final tmdb = TMDB(ApiKeys(UrlCollection.api_key, 'apiReadAccessTokenv4'), defaultLanguage: 'ko');
+    final tmdb = TMDB(ApiKeys(UrlCollection.api_key, 'apiReadAccessTokenv4'),
+        defaultLanguage: 'ko');
     switch (query) {
       case TmdbRequestList.NOW_PLAYING:
         return TmdbMovieDto.fromJson(await tmdb.v3.movies.getNowPlaying());
@@ -23,7 +26,8 @@ class TmdbApi {
 
 Future<void> main(List<String> args) async {
   //api with out console logs
-  final tmdb = TMDB(ApiKeys(UrlCollection.api_key, 'apiReadAccessTokenv4'), defaultLanguage: 'ko');
+  final tmdb = TMDB(ApiKeys(UrlCollection.api_key, 'apiReadAccessTokenv4'),
+      defaultLanguage: 'ko');
   // print(await tmdb.v3.movies.getPopular());
 
   // var result = TmdbMovieDto.fromJson(await tmdb.v3.movies.getNowPlaying());
