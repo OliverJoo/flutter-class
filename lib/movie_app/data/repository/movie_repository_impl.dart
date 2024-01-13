@@ -16,10 +16,8 @@ class MovieRepositoryImpl implements MovieRepository {
   Future<MovieResult<List<MovieInfo>>> getMovieInfoList(Enum query) async {
     try {
       final result = await tmdbInterface.getTmdbMovieResults(query);
-      print('result.results : ${result.results}');
 
       if (result.results != null) {
-        print((result.results!.map((e) => e.toMovieInfo())).toList());
         return MovieResult.success(
             (result.results!.map((e) => e.toMovieInfo())).toList());
       }
@@ -27,6 +25,6 @@ class MovieRepositoryImpl implements MovieRepository {
       return MovieResult.error(Exception(e.toString()));
     }
 
-    return MovieResult.error(throw Exception());
+    return MovieResult.error(Exception('Something was wrong!'));
   }
 }
