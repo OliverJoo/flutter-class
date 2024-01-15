@@ -1,4 +1,5 @@
 import 'package:flutter_class/movie_app/data/data_source/tmdb_interface.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:tmdb_api/tmdb_api.dart';
 
 import '../../core/api_request_collection.dart';
@@ -7,8 +8,11 @@ import '../dto/tmdb_movie_dto.dart';
 class TmdbPackageApi implements TmdbInterface {
   @override
   Future<TmdbMovieDto> getTmdbMovieResults(Enum query) async {
+    await dotenv.load(fileName: "assets/.env");
+
     final tmdb = TMDB(
-        ApiKeys(TmdbUrlRequests.api_key.str, 'apiReadAccessTokenv4'),
+        // ApiKeys(TmdbUrlRequests.api_key.str, 'apiReadAccessTokenv4'),
+        ApiKeys(dotenv.get("tmdb_api"), 'apiReadAccessTokenv4'),
         defaultLanguage: 'ko');
     switch (query) {
       case TmdbPackageRequests.NOW_PLAYING:

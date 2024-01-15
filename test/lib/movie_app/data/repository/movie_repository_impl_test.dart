@@ -13,8 +13,9 @@ void main() {
     switch(result){
       case Success<List<MovieInfo>>():
         expect(result.data[0].title, '웡카');
-        expect(result.data[0].posterPath, '/g5mGMbiZLvgEf628D60GQrPHFJC.jpg');
 
+        expect(result.data[0].posterPath, '/g5mGMbiZLvgEf628D60GQrPHFJC.jpg');
+        print(result.data);
       case Error<List<MovieInfo>>():
         print(result.e.toString());
     }

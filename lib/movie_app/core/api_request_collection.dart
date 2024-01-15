@@ -4,7 +4,7 @@ enum TmdbPackageRequests{
 
 enum TmdbUrlRequests{
   kMovieBaseUrl(str:'https://api.themoviedb.org/3/movie/'),
-  api_key(str:'ba15579107ebff69b219b0cccf64f1e3'),
+  api_key(str:'ba15579107ebff69b219b0cccf64f1e3111'), // 3
   upcomingUrl(str:'https://api.themoviedb.org/3/movie/upcoming&language=ko'),
   nowPlayingUrl(str:'https://api.themoviedb.org/3/movie/now_playing&language=ko'),
   popularUrl(str:'https://api.themoviedb.org/3/movie/popular&language=ko'),
