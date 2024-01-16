@@ -13,15 +13,12 @@ enum TmdbUrlRequests{
   final String str;
   const TmdbUrlRequests({required this.str});
 }
-
-
-  // const String kBaseUrl = 'https://api.themoviedb.org/3/';
-  // const String kSearchBaseUrl = 'https://api.themoviedb.org/3/search/movie/';
-  // const String kGenreBaseUrl = 'https://api.themoviedb.org/3/genre/movie/list';
-  // const String kDiscoverBaseUrl = 'https://api.themoviedb.org/3/discover/movie/';
-  // const String kPosterUrl = 'https://image.tmdb.org/t/p/w500';
-  // const String kBackdropUrl = 'https://image.tmdb.org/t/p/w1280';
-  // const String kProfileUrl = 'https://image.tmdb.org/t/p/w200';
-  // const String kLargeProfileUrl = 'https://image.tmdb.org/t/p/w500';
-  // const String kYoutubeUrl = 'https://www.youtube.com/watch?v=';
+// kBaseUrl = 'https://api.themoviedb.org/3/';
+// kSearchBaseUrl = 'https://api.themoviedb.org/3/search/movie/';
+// kGenreBaseUrl = 'https://api.themoviedb.org/3/genre/movie/list';
+// kDiscoverBaseUrl = 'https://api.themoviedb.org/3/discover/movie/';
+// kPosterUrl = 'https://image.tmdb.org/t/p/w500';
+// kBackdropUrl = 'https://image.tmdb.org/t/p/w1280';
+// kProfileUrl = 'https://image.tmdb.org/t/p/w200';
+// kLargeProfileUrl = 'https://image.tmdb.org/t/p/w500';
 

@@ -6,6 +6,7 @@ import 'src/widgets.dart';
 class YesNoSelection extends StatelessWidget {
   const YesNoSelection(
       {super.key, required this.state, required this.onSelection});
+
   final Attending state;
   final void Function(Attending selection) onSelection;
 
