@@ -63,6 +63,7 @@ dependencies:
   flutter_dotenv: ^5.1.0
   dio: ^5.4.0
   tmdb_api: ^2.1.5
+  devtools_extensions: ^0.0.9
 
 
 dev_dependencies:
