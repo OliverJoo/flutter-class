@@ -22,6 +22,6 @@ class TmdbUrlApi implements TmdbInterface {
 
 // void main() async {
 //   final result =
-//       await TmdbUrlApi().getTmdbMovieResults(TmdbUrlRequests.upcomingUrl);
+//       await TmdbUrlApi().getTmdbMovieResults(TmdbUrlRequests.upcomingUrl.str);
 //   print(result);
 // }

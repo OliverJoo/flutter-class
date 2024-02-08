@@ -18,8 +18,7 @@ class MovieRepositoryImpl implements MovieRepository {
       final result = await tmdbInterface.getTmdbMovieResults(query);
 
       if (result.results != null) {
-        return MovieResult.success(
-            (result.results!.map((e) => e.toMovieInfo())).toList());
+        return MovieResult.success((result.results!.map((e) => e.toMovieInfo())).toList());
       }
     } catch (e) {
       return MovieResult.error(Exception(e.toString()));
