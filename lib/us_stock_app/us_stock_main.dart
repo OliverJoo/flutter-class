@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class/us_stock_app/data/data_source/local/company_listing_entity.dart';
 import 'package:flutter_class/us_stock_app/util/color_schemes.dart';
+import 'package:hive/hive.dart';
 
 void main() {
+  Hive.registerAdapter(CompanyListingEntityAdapter());
+
   runApp(const MyApp());
 }
 
@@ -42,9 +46,9 @@ class _MainScreenState extends State<MainScreen> {
         title: const Text('test'),
       ),
       body: Container(
-        child: FloatingActionButton(onPressed: (){}),
+        child: FloatingActionButton(onPressed: () {}),
       ),
-    );;
+    );
+    ;
   }
 }
-
