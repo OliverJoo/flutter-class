@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_class/us_stock_app/color_schemes.g.dart';
+import 'package:flutter_class/us_stock_app/util/color_schemes.dart';
 
 void main() {
   runApp(const MyApp());
