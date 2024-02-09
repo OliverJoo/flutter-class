@@ -47,3 +47,5 @@ app.*.map.json
 *.lock
 *.xcconfig
 *.pbxproj
+*.freezed.dart
+*.g.dart
