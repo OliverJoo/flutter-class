@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Counter'),
+          title: const Text('Counter'),
         ),
         body: Counter(),
       ),
@@ -40,35 +40,33 @@ class _CounterState extends State<Counter> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-              onPressed: () {
-                counterSubject.add(++counter);
-              },
-              child: Text('add'),
-            ),
-            StreamBuilder<int>(
-                stream: counterSubject.stream,
-                initialData: 0,
-                builder: (context, snapshot) {
-                  if (snapshot.hasData) {
-                    return snapshot == null
-                        ? Text('null')
-                        : Text(
-                            '${snapshot.data}',
-                            style: TextStyle(fontSize: 30),
-                          );
-                  } else if (snapshot.hasError) {
-                    // return Text('Error');
-                    throw Exception('Error!');
-                  }
-                  return CircularProgressIndicator();
-                }),
-          ],
-        ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          ElevatedButton(
+            onPressed: () {
+              counterSubject.add(++counter);
+            },
+            child: const Text('add'),
+          ),
+          StreamBuilder<int>(
+              stream: counterSubject.stream,
+              initialData: 0,
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  return snapshot == null
+                      ? const Text('null')
+                      : Text(
+                          '${snapshot.data}',
+                          style: const TextStyle(fontSize: 30),
+                        );
+                } else if (snapshot.hasError) {
+                  // return Text('Error');
+                  throw Exception('Error!');
+                }
+                return const CircularProgressIndicator();
+              }),
+        ],
       ),
     );
   }

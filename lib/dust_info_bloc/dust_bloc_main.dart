@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_class/dust_info_block/bloc/air_bloc.dart';
+import 'bloc/air_bloc.dart';
 import 'model/air_result.dart';
 
 void main() {

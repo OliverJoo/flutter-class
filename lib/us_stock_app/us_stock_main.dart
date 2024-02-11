@@ -11,6 +11,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:get_it/get_it.dart';
 
+// Hive, GetIt, MultiProvider, ViewModel Constructor usage, callback actions
 void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(CompanyListingEntityAdapter());

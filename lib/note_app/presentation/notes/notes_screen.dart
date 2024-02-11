@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_class/note_app/domain/util/note_order.dart';
 import 'package:flutter_class/note_app/presentation/add_edit_note/add_edit_note_screen.dart';
 import 'package:flutter_class/note_app/presentation/notes/components/note_item.dart';
 import 'package:flutter_class/note_app/presentation/notes/components/order_section.dart';
